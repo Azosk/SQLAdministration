@@ -1,0 +1,16 @@
+2. Install SQL Server Management Studio (SSMS)
+SSMS stands for SQL Server Management Studio.
+
+It is a graphical tool to manage SQL Server instances, run queries, design databases, and configure security.
+
+Download link: https://aka.ms/ssms
+
+Steps:
+
+Download the SSMS installer.
+
+Run the installer and follow the prompts.
+
+After installation, launch SSMS.
+
+Connect to your SQL Server instance (e.g., localhost or .\SQLEXPRESS).

@@ -1,0 +1,22 @@
+3. Optional: Setup SQL Server Using Docker
+You can also run SQL Server 2022 in a Docker container.
+
+Requirements
+Install Docker Desktop (supports Windows, macOS, Linux)
+
+Terminal or shell that supports PowerShell commands (PowerShell is cross-platform)
+
+Steps
+Open a terminal (PowerShell recommended).
+
+Pull the SQL Server 2022 image:
+
+docker pull mcr.microsoft.com/mssql/server:2022-latest
+
+Run the container with environment variables (the -e parameter sets the variable in the environment):
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourStrong!Passw0rd" -p 1433:1433 --name sqlserver2022 -d mcr.microsoft.com/mssql/server:2022-latest
+
+Connect to the SQL Server instance running in Docker using SSMS or Azure Data Studio with localhost,1433.
+
+Check the screenshot for an example use of Azure Data Studio within images in this directory
