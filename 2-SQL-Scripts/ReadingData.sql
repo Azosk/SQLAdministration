@@ -106,6 +106,28 @@ GO
 -- WHERE StockedQty > 10
 -- ORDER BY OrderQty ASC;
 
+-- Select all customers and employees into one data set discarding duplicates
+-- SELECT p.FirstName, e.JobTitle
+-- FROM [HumanResources].[Employee] AS e 
+-- INNER JOIN [Person].[Person] p
+-- ON e.BusinessEntityID = p.BusinessEntityID
+-- UNION
+-- SELECT p.FirstName, p.PersonType 
+-- FROM [Sales].[Customer] AS c 
+-- INNER JOIN [Person].[Person] p
+-- ON c.CustomerID = p.BusinessEntityID;
+
+-- Select all customers and employees into one data set including all duplicates
+-- SELECT p.FirstName, e.JobTitle
+-- FROM [HumanResources].[Employee] AS e 
+-- INNER JOIN [Person].[Person] p
+-- ON e.BusinessEntityID = p.BusinessEntityID
+-- UNION ALL
+-- SELECT p.FirstName, p.PersonType 
+-- FROM [Sales].[Customer] AS c 
+-- INNER JOIN [Person].[Person] p
+-- ON c.CustomerID = p.BusinessEntityID;
+
 -- Using DISTINCT eliminates all duplicates from a table.
 -- In this case, it is anyone with a different first and last name.
 -- SELECT DISTINCT 
